@@ -30,6 +30,21 @@
                 container.innerHTML = container.innerHTML.slice(0, -1);
             }
         }
+
+        function deleteAll() {
+            let container = document.getElementById('resultArea');
+            container.innerHTML = '';
+        }
+
+        function SquareRoot() {
+            var val = document.getElementById("resultArea").innerHTML;
+            document.getElementById("resultArea").innerHTML = Math.sqrt(val);
+        }
+
+        function ExponentofNumber() {
+            var val = document.getElementById("resultArea").innerHTML;
+            document.getElementById("resultArea").innerHTML = Math.pow(val, 2);
+        }
     </script>
 </head>
 
@@ -39,9 +54,9 @@
 
     <table>
         <tr>
-            <td onclick=appendOperation(3.14159) class="highlight">Pi</td>
-            <td></td>
-            <td></td>
+            <td onclick="SquareRoot()" class="highlight">&radic;</td>
+            <td onclick="ExponentofNumber()" class="highlight">x&sup2;</td>
+            <td onclick="deleteAll()" class="highlight">AC</td>
             <td onclick="deleteLast()">DEL</td>
         </tr>
         </tr>
